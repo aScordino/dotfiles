@@ -211,6 +211,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # i3-gaps configuration
 ## Remove windows titlebar and change border size
 for_window [class=".*"] border pixel 4
+for_window [title="Picture in picture"] border pixel 0
 
 ## Configure gaps
 gaps inner 10
