@@ -122,6 +122,9 @@ bindsym $mod+v split v
 ## Enter full-screen mode
 bindsym $mod+f fullscreen toggle
 
+# Do not follow mouse
+focus_follows_mouse no
+
 ## Change container layout
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
