@@ -1,0 +1,9 @@
+[user]
+	name = Antonino Scordino
+	email = git@antonino.cf
+[commit]
+	gpgsign = true
+[core]
+	editor = nano
+[credential]
+	helper = store
