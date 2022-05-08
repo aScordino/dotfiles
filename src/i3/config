@@ -13,7 +13,7 @@
 ## Set some variables
 set $mod Mod4
 set $browser chromium
-set $terminal alacritty
+set $terminal xfce4-terminal
 set $wallpaper .wallpaper
 
 ### Resizing
