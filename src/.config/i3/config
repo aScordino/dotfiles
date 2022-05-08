@@ -62,7 +62,7 @@ exec --no-startup-id setxkbmap it
 exec --no-startup-id picom --experimental-backends
 
 ## Set default wallpaper
-exec --no-startup-id feh --bg-scale $HOME/$wallpaper.png
+exec --no-startup-id feh --bg-scale $HOME/$wallpaper.jpg
 
 ## Start XDG autostart .desktop files using dex
 exec --no-startup-id dex --autostart --environment i3
@@ -74,16 +74,13 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute	     exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@   toggle && $refresh_i3status
 bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-## Use Mouse+$mod to drag floating windows to their wanted position
+# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-## Start i3bar to display a workspace bar
+# Start i3bar to display a workspace bar
 bar {
         status_command i3status
 }
-
-## Start a compositor
-exec --no-startup-id picom --experimental-backend
 
 # ---
 
