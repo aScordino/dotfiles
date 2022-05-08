@@ -82,6 +82,9 @@ bar {
         status_command i3status
 }
 
+## Start a compositor
+exec --no-startup-id picom --experimental-backend
+
 # ---
 
 # Programs
