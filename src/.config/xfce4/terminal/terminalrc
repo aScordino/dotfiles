@@ -12,7 +12,7 @@ MiscMenubarDefault=FALSE
 MiscMouseAutohide=FALSE
 MiscMouseWheelZoom=TRUE
 MiscToolbarDefault=FALSE
-MiscConfirmClose=TRUE
+MiscConfirmClose=FALSE
 MiscCycleTabs=TRUE
 MiscTabCloseButtons=TRUE
 MiscTabCloseMiddleClick=TRUE
@@ -34,3 +34,5 @@ ColorPalette=#3f3f3f;#705050;#60b48a;#dfaf8f;#9ab8d7;#dc8cc3;#8cd0d3;#dcdcdc;#70
 ColorCursor=#dcdcdc
 TitleMode=TERMINAL_TITLE_HIDE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+
