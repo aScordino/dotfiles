@@ -53,7 +53,7 @@ mode "gaps" {
 }
 
 ## Font to be used system-wide
-font pango:Source Code Pro 8.5
+font pango:Liberation Mono 10
 
 ## Set Italian keyboard
 exec --no-startup-id setxkbmap it
