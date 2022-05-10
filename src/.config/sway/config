@@ -27,11 +27,10 @@ set $down  j
 set $up    k
 set $right l
 
-## Your preferred terminal emulator
-set $term foot
-
-## Your preferred application launcher
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+## Your preferred {cmd,web,app}
+set $cmd foot
+set $web firefox
+set $app dmenu_path | dmenu | xargs swamsg exec --
 
 ## Resizing function
 mode "resize" {
@@ -61,13 +60,16 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 # Shortcuts
 ## Start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Return exec $cmd
 
 ## Kill focused window
 bindsym $mod+Shift+q kill
 
+## Start your web browser
+bindsym $mod+Shift+Return exec $web
+
 ## Start your launcher
-bindsym $mod+d exec $menu
+bindsym $mod+d exec $app
 
 ## Set key for floating modifiers
 floating_modifier $mod normal
