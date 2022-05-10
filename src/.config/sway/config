@@ -10,6 +10,13 @@
 # Read `man 5 sway` for a complete reference.
 # Edited by Antonino Scordino (@aScordino)
 
+# Startup
+## Set Italian keyboard layout
+input type:keyboard {
+        xkb_layout it
+}
+
+
 # Variables
 ## Logo key
 set $mod Mod4
