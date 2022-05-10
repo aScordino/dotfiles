@@ -86,6 +86,16 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@   toggle                  
 bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+## Take screenshots
+## Full screen
+bindsym Print exec grimshot copy screen
+
+## Active window
+bindsym Ctrl+Print exec grimshot copy active
+
+## Area
+bindsym Shift+Print exec grimshot copy window
+
 
 # Windows
 ## Move your focus 
