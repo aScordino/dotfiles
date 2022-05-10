@@ -30,16 +30,16 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 mode "resize" {
 
     ### Vim keys
-    bindsym $left  resize shrink width  10px
-    bindsym $down  resize grow   height 10px
-    bindsym $up    resize shrink height 10px
-    bindsym $right resize grow   width  10px
+    bindsym $left  resize shrink width  30px
+    bindsym $down  resize grow   height 30px
+    bindsym $up    resize shrink height 30px
+    bindsym $right resize grow   width  30px
 
     ### Arrow keys
-    bindsym Left  resize shrink width  10px
-    bindsym Down  resize grow   height 10px
-    bindsym Up    resize shrink height 10px
-    bindsym Right resize grow   width  10px
+    bindsym Left  resize shrink width  30px
+    bindsym Down  resize grow   height 30px
+    bindsym Up    resize shrink height 30px
+    bindsym Right resize grow   width  30px
 
     ### Return to default mode
     bindsym Return mode "default"
