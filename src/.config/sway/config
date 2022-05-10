@@ -211,6 +211,9 @@ bar {
 }
 
 
+## Font to be used system-wide
+font pango: Source Code Pro 10
+
 ## Gaps
 gaps inner 15
 gaps outer 5
