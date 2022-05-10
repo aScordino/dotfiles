@@ -220,5 +220,9 @@ gaps outer 5
 smart_gaps on
 smart_borders on
 
+## Completly get rid of borders
+default_border pixel 3.5
+default_floating_border pixel 3.5
+
 # === #
 include /etc/sway/config.d/*
