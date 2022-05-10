@@ -52,6 +52,22 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
+### Changing inner/outer gaps
+mode "gaps" {
+        # Inner
+	bindsym plus gaps inner current plus 5
+	bindsym minus gaps inner current minus 5
+
+	# Outer
+	bindsym Shift+plus gaps outer current plus 5
+	bindsym Shift+minus gaps outer current minus 5
+
+        # Return back to normal state
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+g mode "default"
+}
+
 
 # Output configuration
 ## Default wallpaper
@@ -172,6 +188,8 @@ bindsym $mod+a focus parent
 ## Enter in resizing mode
 bindsym $mod+r mode "resize"
 
+## Enter in gapping mode
+bindsym $mod+g mode "gaps"
 
 # Styling
 ## Bar
