@@ -99,7 +99,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+r reload
 
 ## Manage the session
-swaynag -t warning -m 'What do you want to do?' -B 'Log out' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot' --button-dismiss-gap 2.5px --button-gap 10px --button-padding 3
+bindsym $mod+Shift+e exec swaynag -t warning -m 'What do you want to do?' -B 'Log out' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot' --button-dismiss-gap 2.5px --button-gap 10px --button-padding 3
 
 ## Control volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   +10%                       
@@ -180,6 +180,9 @@ bindsym $mod+e layout toggle split
 
 ## Make the current focus fullscreen
 bindsym $mod+f fullscreen
+
+# Do not follow mouse
+focus_follows_mouse no
 
 ## Toggle the current focus between tiling and floating mode
 bindsym $mod+Shift+space floating toggle
