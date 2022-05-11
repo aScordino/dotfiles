@@ -16,6 +16,8 @@ input type:keyboard {
         xkb_layout it
 }
 
+## Disable mouse acceleration
+input * accel_profile flat
 
 ## Enable XWayland at launch
 xwayland enable
@@ -229,6 +231,7 @@ gaps outer 5
 ## Completly get rid of borders
 default_border pixel 3.5
 default_floating_border pixel 3.5
+hide_edge_borders none
 
 # === #
 include /etc/sway/config.d/*
