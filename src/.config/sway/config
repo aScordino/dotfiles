@@ -225,8 +225,6 @@ font pango: Source Code Pro 10
 ## Gaps
 gaps inner 15
 gaps outer 5
-smart_gaps on
-smart_borders on
 
 ## Completly get rid of borders
 default_border pixel 3.5
