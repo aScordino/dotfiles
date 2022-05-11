@@ -17,6 +17,10 @@ input type:keyboard {
 }
 
 
+## Enable XWayland at launch
+xwayland enable
+
+
 # Variables
 ## Logo key
 set $mod Mod4
@@ -30,7 +34,7 @@ set $right l
 ## Your preferred {cmd,web,app}
 set $cmd foot
 set $web firefox
-set $app dmenu_path | dmenu | xargs swamsg exec --
+set $app dmenu_path | wmenu | xargs swaymsg exec --
 
 ## Resizing function
 mode "resize" {
