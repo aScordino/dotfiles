@@ -98,8 +98,8 @@ floating_modifier $mod normal
 ## Reload the configuration file
 bindsym $mod+Shift+r reload
 
-## Exit the Wayland session
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+## Manage the session
+bindsym $mod+Shift+e exec swaynag -t warning -m 'What do you want to do?' -B 'Log out' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot'
 
 ## Control volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   +10%                       
