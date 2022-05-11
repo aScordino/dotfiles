@@ -33,7 +33,7 @@ set $right l
 
 ## Your preferred {cmd,web,app}
 set $cmd foot
-set $web firefox
+set $web chromium
 set $app dmenu_path | wmenu | xargs swaymsg exec --
 
 ## Resizing function
