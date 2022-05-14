@@ -222,7 +222,7 @@ bar {
 
 
 ## Font to be used system-wide
-font pango: Source Code Pro 10
+font pango: Source Sans Pro 10
 
 ## Gaps
 gaps inner 15
