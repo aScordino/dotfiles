@@ -40,7 +40,6 @@ set $app dmenu_path | wmenu | xargs swaymsg exec --
 
 ## Resizing function
 mode "resize" {
-
     ### Vim keys
     bindsym $left  resize shrink width  30px
     bindsym $down  resize grow   height 30px
@@ -110,13 +109,13 @@ bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   @DEFAULT
 bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 ## Take screenshots
-## Full screen
+### Full screen
 bindsym Print exec grimshot copy screen
 
-## Active window
+### Active window
 bindsym Ctrl+Print exec grimshot copy active
 
-## Area
+### Area
 bindsym Shift+Print exec grimshot copy area
 
 
