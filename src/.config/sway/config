@@ -34,7 +34,7 @@ set $up    k
 set $right l
 
 ## Your preferred {cmd,web,app}
-set $cmd foot
+set $cmd alacritty
 set $web chromium
 set $app dmenu_path | wmenu | xargs swaymsg exec --
 
