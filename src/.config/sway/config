@@ -38,6 +38,9 @@ set $cmd alacritty
 set $web chromium
 set $app dmenu_path | wmenu | xargs swaymsg exec --
 
+## Set gnome-schema to be used for themes etc.
+set $gnome-schema org.gnome.desktop.interface
+
 ## Resizing function
 mode "resize" {
     ### Vim keys
@@ -231,6 +234,11 @@ gaps outer 5
 default_border pixel 3.5
 default_floating_border pixel 3.5
 hide_edge_borders none
+
+## Set themes, fonts, cursors etc. for GTK applications
+exec_always {
+    gsettings set $gnome-schema font-name 'Source Sans Pro'
+}
 
 # === #
 include /etc/sway/config.d/*
