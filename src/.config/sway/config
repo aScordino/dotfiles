@@ -36,7 +36,7 @@ set $right l
 ## Your preferred {cmd,web,app}
 set $cmd alacritty
 set $web chromium
-set $app dmenu_path | wmenu | xargs swaymsg exec --
+set $app dmenu_path | wmenu -f 'Source Sans Pro Medium 10' -N '#0C0C0C' -n '#CECECE' -S '#6C6F6F' | xargs swaymsg exec --
 
 ## Set gnome-schema to be used for themes etc.
 set $gnome-schema org.gnome.desktop.interface
@@ -103,7 +103,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+r reload
 
 ## Manage the session
-bindsym $mod+Shift+e exec swaynag -t warning -m 'What do you want to do?' -B 'Log out' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot' --button-dismiss-gap 2.5px --button-gap 10px --button-padding 3
+bindsym $mod+Shift+e exec swaynag -t warning -m 'What do you want to do?' -B 'Log out' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot' --button-dismiss-gap 2.5px --button-gap 10px --button-padding 3 --background '#0C0C0C' --text '#CECECE' --button-text '#CECECE' --border-bottom-size 0 --button-border-size 0 --button-background '#6C6F6F' --button-border-size 3 --border '#0C0C0C' -f 'Source Sans Pro Medium 10'
 
 ## Control volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   +10%                       
@@ -209,18 +209,26 @@ bar {
     position top
     status_command while date +'%d/%m/%Y | %H:%M '; do sleep 1; done
     colors {
-        statusline #ffffff
-        background #323232
-        separator  #3d3d3d
+        statusline #CECECE
+        background #0C0C0C
+        separator  #0C0C0C
 
 #       <colorclass>       <border> <background> <text>
-        focused_workspace  #4c7899   #285577     #ffffff
-        active_workspace   #333333   #5f676a     #ffffff
-        inactive_workspace #2f343a   #222222     #888888
-        urgent_workspace   #2f343a   #900000     #ffffff
-        binding_mode       #2f343a   #900000     #ffffff
+        focused_workspace  #0C0C0C  #0C0C0C      #CECECE
+        active_workspace   #0C0C0C  #0C0C0C      #6C6F6F
+        inactive_workspace #0C0C0C  #0C0C0C      #6C6F6F
+        urgent_workspace   #0C0C0C  #0C0C0C      #6C6F6F
+        binding_mode       #0C0C0C  #0C0C0C      #6C6F6F
     }
 }
+
+## Windows' border
+# <colorclass>          <border> <background> <indicator> <childborder>
+client.focused          #999FA3  #999FA3      #999FA3     #999FA3
+client.focused_inactive #6C6F6F  #6C6F6F      #6C6F6F     #6C6F6F
+client.unfocused        #6C6F6F  #6C6F6F      #6C6F6F     #6C6F6F
+client.urgent           #6C6F6F  #6C6F6F      #6C6F6F     #6C6F6F
+client.placeholder      #6C6F6F  #6C6F6F      #6C6F6F     #6C6F6F
 
 
 ## Font to be used system-wide
