@@ -36,7 +36,7 @@ set $right l
 ## Your preferred {cmd,web,app}
 set $cmd alacritty
 set $web chromium
-set $app dmenu_path | wmenu -f 'Source Sans Pro Medium 10' -N '#0C0C0C' -n '#CECECE' -S '#6C6F6F' | xargs swaymsg exec --
+set $app rofi -show drun -theme dark
 
 ## Set gnome-schema to be used for themes etc.
 set $gnome-schema org.gnome.desktop.interface
