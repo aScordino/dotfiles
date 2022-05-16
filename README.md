@@ -2,7 +2,7 @@
 ## Screenshot(s)
 ![](https://i.imgur.com/L4eWDq2.png)
 ![](https://i.imgur.com/DwFlzFf.png)
-![](https://i.imgur.com/jCb9hOp.png)
+![](https://i.imgur.com/mBjztIG.png)
 
 ## Setup
  * [Arch Linux](https://archlinux.org) as distro;
