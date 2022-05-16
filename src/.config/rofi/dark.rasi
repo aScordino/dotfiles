@@ -31,6 +31,8 @@
     background-color: #999FA3;
     border: 0;
     padding: 3.5px;
+    width: 35%;
+    height: 50%;
 }
 
 #mainbox {
