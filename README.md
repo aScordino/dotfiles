@@ -2,6 +2,7 @@
 ## Screenshot(s)
 ![](https://i.imgur.com/L4eWDq2.png)
 ![](https://i.imgur.com/DwFlzFf.png)
+![](https://i.imgur.com/jCb9hOp.png)
 
 ## Setup
  * [Arch Linux](https://archlinux.org) as distro;
@@ -11,4 +12,5 @@
  * [Chromium](https://www.chromium.org/Home/) as browser;
  * [grimshot](https://aur.archlinux.org/packages/grimshot) as screenshot taker;
  * [neofetch](https://github.com/dylanaraps/neofetch) as info printer;
- * [alacritty](https://github.com/alacritty/alacritty) as terminal emulator.
+ * [alacritty](https://github.com/alacritty/alacritty) as terminal emulator;
+ * [rofi-lbonn-wayland](https://github.com/lbonn/rofi) as dmenu replacment.
