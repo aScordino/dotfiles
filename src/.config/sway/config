@@ -124,7 +124,9 @@ floating_modifier $mod normal
 bindsym $mod+Shift+r reload
 
 ## Manage the session
-bindsym $mod+Shift+e exec swaynag -t warning -m 'What do you want to do?' -B 'Log out' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot' --button-dismiss-gap 2.5px --button-gap 10px --button-padding 3 --background '#0C0C0C' --text '#CECECE' --button-text '#CECECE' --border-bottom-size 0 --button-border-size 0 --button-background '#6C6F6F' --button-border-size 3 --border '#0C0C0C' -f 'Source Sans Pro Medium 10'
+bindsym $mod+Shift+e exec swaynag -t warning -m 'What do you want to do?' -B 'Log out' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot' \
+    --button-dismiss-gap 2.5px --button-gap 10px --button-padding 3 --border-bottom-size 0 --button-border-size 3 \ 
+    --background '$background' --text '$foreground' --button-text '$foreground' --button-background '$color1' --border '$background' -f 'Source Sans Pro Medium 10'
 
 ## Control volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   +10%                       
@@ -239,26 +241,27 @@ bar {
     height 35
     status_command while date +'%d %b %Y | %H:%M '; do sleep 1; done
     colors {
-        statusline #CECECE
-        background #0C0C0C
-        separator  #0C0C0C
+    colors {
+        statusline $foreground
+        background $background
+        separator  $background
 
-#       <colorclass>       <border> <background> <text>
-        focused_workspace  #0C0C0C  #0C0C0C      #CECECE
-        active_workspace   #0C0C0C  #0C0C0C      #6C6F6F
-        inactive_workspace #0C0C0C  #0C0C0C      #6C6F6F
-        urgent_workspace   #0C0C0C  #0C0C0C      #6C6F6F
-        binding_mode       #6C6F6F  #6C6F6F      #CECECE
+#       <colorclass>       <border>    <background> <text>
+        focused_workspace  $background $background  $foreground
+        active_workspace   $background $background  $color1
+        inactive_workspace $background $background  $color1
+        urgent_workspace   $background $background  $color1
+        binding_mode       $color1     $color1      $foreground
     }
 }
 
 ## Windows' border
 # <colorclass>          <border> <background> <indicator> <childborder>
-client.focused          #999FA3  #999FA3      #999FA3     #999FA3
-client.focused_inactive #6C6F6F  #6C6F6F      #6C6F6F     #6C6F6F
-client.unfocused        #6C6F6F  #6C6F6F      #6C6F6F     #6C6F6F
-client.urgent           #6C6F6F  #6C6F6F      #6C6F6F     #6C6F6F
-client.placeholder      #6C6F6F  #6C6F6F      #6C6F6F     #6C6F6F
+client.focused          $color6  $color6      $color6     $color6
+client.focused_inactive $color1  $color1      $color1     $color1
+client.unfocused        $color1  $color1      $color1     $color1
+client.urgent           $color1  $color1      $color1     $color1
+client.placeholder      $color1  $color1      $color1     $color1
 
 ## Font to be used system-wide
 font pango: Source Sans Pro 10
