@@ -258,6 +258,7 @@ hide_edge_borders none
 ## Set themes, fonts, cursors etc. for GTK applications
 exec_always {
     gsettings set $gnome-schema font-name 'Source Sans Pro'
+    gsettings set org.gnome.desktop.wm.preferences button-layout ""
 }
 
 # === #
