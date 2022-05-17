@@ -11,6 +11,10 @@
 # Edited by Antonino Scordino (@aScordino)
 
 # Startup
+## Include configuration files
+include /etc/sway/config.d/*
+include $HOME/.cache/wal/colors-sway
+
 ## Set Italian keyboard layout
 input type:keyboard {
         xkb_layout it
@@ -274,6 +278,3 @@ exec_always {
     gsettings set $gnome-schema font-name 'Source Sans Pro'
     gsettings set org.gnome.desktop.wm.preferences button-layout ""
 }
-
-# === #
-include /etc/sway/config.d/*
