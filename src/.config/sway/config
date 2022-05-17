@@ -22,6 +22,7 @@ input * accel_profile flat
 ## Enable XWayland at launch
 xwayland enable
 
+# === #
 
 # Variables
 ## Logo key
@@ -43,6 +44,7 @@ set $gnome-schema org.gnome.desktop.interface
 
 ## Resizing function
 mode "resize" {
+
     ### Vim keys
     bindsym $left  resize shrink width  30px
     bindsym $down  resize grow   height 30px
@@ -61,20 +63,21 @@ mode "resize" {
     bindsym $mod+r mode "default"
 }
 
-### Changing inner/outer gaps
+## Changing inner/outer gaps
 mode "gaps" {
-        # Inner
-	bindsym plus gaps inner current plus 5
-	bindsym minus gaps inner current minus 5
 
-	# Outer
-	bindsym Shift+plus gaps outer current plus 5
-	bindsym Shift+minus gaps outer current minus 5
+    ### Inner
+    bindsym plus gaps inner current plus 5
+    bindsym minus gaps inner current minus 5
 
-        # Return back to normal state
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+g mode "default"
+    ### Outer
+    bindsym Shift+plus gaps outer current plus 5
+    bindsym Shift+minus gaps outer current minus 5
+
+    ### Return back to normal state
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+g mode "default"
 }
 
 ## Set workspace variables
@@ -89,10 +92,13 @@ set $ws8  VIII
 set $ws9  IX
 set $ws10 X
 
+# === #
+
 # Output configuration
 ## Default wallpaper
 output * bg $HOME/.wallpaper.jpg fill
 
+# === #
 
 # Shortcuts
 ## Start a terminal
@@ -132,6 +138,7 @@ bindsym Ctrl+Print exec grimshot copy active
 ### Area
 bindsym Shift+Print exec grimshot copy area
 
+# === #
 
 # Windows
 ## Move your focus 
@@ -160,6 +167,7 @@ bindsym $mod+Shift+Down   move down
 bindsym $mod+Shift+Up     move up
 bindsym $mod+Shift+Right  move right
 
+# === #
 
 # Workspaces
 ## Switch to workspace
@@ -186,6 +194,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# === #
 
 # Layout
 ## Switch the current container between different layout styles
@@ -216,7 +225,9 @@ bindsym $mod+g mode "gaps"
 
 ## Modify how PiP windows should be displayed
 for_window [title="Picture in picture"] floating enable, move position 1249 645, resize set width 620px height 350px, sticky enable
- 
+
+# === #
+
 # Styling
 ## Bar
 bar {
@@ -245,7 +256,6 @@ client.unfocused        #6C6F6F  #6C6F6F      #6C6F6F     #6C6F6F
 client.urgent           #6C6F6F  #6C6F6F      #6C6F6F     #6C6F6F
 client.placeholder      #6C6F6F  #6C6F6F      #6C6F6F     #6C6F6F
 
-
 ## Font to be used system-wide
 font pango: Source Sans Pro 10
 
@@ -253,7 +263,8 @@ font pango: Source Sans Pro 10
 gaps inner 15
 gaps outer 5
 
-## Completly get rid of borders
+## Completly get rid of titlebars and change
+## border's size
 default_border pixel 5
 default_floating_border pixel 5
 hide_edge_borders none
