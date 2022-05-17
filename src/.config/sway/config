@@ -215,7 +215,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+g mode "gaps"
 
 ## Modify how PiP windows should be displayed
-for_window [title="Picture in picture"] floating enable, move position 1425 745, resize set width 445px height 250px, sticky enable
+for_window [title="Picture in picture"] floating enable, move position 1249 645, resize set width 620px height 350px, sticky enable
  
 # Styling
 ## Bar
