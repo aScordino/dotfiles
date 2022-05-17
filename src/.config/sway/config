@@ -219,7 +219,7 @@ bindsym $mod+g mode "gaps"
 bar {
     position top
     height 35
-    status_command while date +'%d/%m/%Y | %H:%M '; do sleep 1; done
+    status_command while date +'%d %b %Y | %H:%M '; do sleep 1; done
     colors {
         statusline #CECECE
         background #0C0C0C
