@@ -1,6 +1,6 @@
 # .files (dotfiles)
 ## Screenshot(s)
-![](https://i.imgur.com/PnjKeiE.png)
+![](https://i.imgur.com/kDOFm6x.png)
 ![](https://i.imgur.com/DwFlzFf.png)
 ![](https://i.imgur.com/mBjztIG.png)
 
