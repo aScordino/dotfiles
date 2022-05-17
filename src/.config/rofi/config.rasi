@@ -11,7 +11,7 @@
 
 configuration {
 	modi: "drun";
-	font: "Source Sasn Pro Medium 10";
+	font: "Roboto 10";
 	drun-display-format: "{name}";
   timeout {
       action: "kb-cancel";

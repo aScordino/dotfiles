@@ -26,7 +26,6 @@ input * accel_profile flat
 ## Enable XWayland at launch
 xwayland enable
 
-# === #
 
 # Variables
 ## Logo key
@@ -48,7 +47,6 @@ set $gnome-schema org.gnome.desktop.interface
 
 ## Resizing function
 mode "resize" {
-
     ### Vim keys
     bindsym $left  resize shrink width  30px
     bindsym $down  resize grow   height 30px
@@ -67,21 +65,20 @@ mode "resize" {
     bindsym $mod+r mode "default"
 }
 
-## Changing inner/outer gaps
+### Changing inner/outer gaps
 mode "gaps" {
+        # Inner
+	bindsym plus gaps inner current plus 5
+	bindsym minus gaps inner current minus 5
 
-    ### Inner
-    bindsym plus gaps inner current plus 5
-    bindsym minus gaps inner current minus 5
+	# Outer
+	bindsym Shift+plus gaps outer current plus 5
+	bindsym Shift+minus gaps outer current minus 5
 
-    ### Outer
-    bindsym Shift+plus gaps outer current plus 5
-    bindsym Shift+minus gaps outer current minus 5
-
-    ### Return back to normal state
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym $mod+g mode "default"
+        # Return back to normal state
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+g mode "default"
 }
 
 ## Set workspace variables
@@ -96,13 +93,10 @@ set $ws8  VIII
 set $ws9  IX
 set $ws10 X
 
-# === #
-
 # Output configuration
 ## Default wallpaper
 output * bg $HOME/.wallpaper.jpg fill
 
-# === #
 
 # Shortcuts
 ## Start a terminal
@@ -125,8 +119,8 @@ bindsym $mod+Shift+r reload
 
 ## Manage the session
 bindsym $mod+Shift+e exec swaynag -t warning -m 'What do you want to do?' -B 'Log out' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot' \
-    --button-dismiss-gap 2.5px --button-gap 10px --button-padding 3 --border-bottom-size 0 --button-border-size 3 \ 
-    --background '$background' --text '$foreground' --button-text '$foreground' --button-background '$color1' --border '$background' -f 'Source Sans Pro Medium 10'
+    --button-dismiss-gap 2.5px --button-gap 10px --button-padding 3 --border-bottom-size 0 --button-border-size 3 \
+    --background '$background' --text '$foreground' --button-text '$foreground' --button-background '$color1' --border '$background' -f 'Roboto 10'
 
 ## Control volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   +10%                       
@@ -144,7 +138,6 @@ bindsym Ctrl+Print exec grimshot copy active
 ### Area
 bindsym Shift+Print exec grimshot copy area
 
-# === #
 
 # Windows
 ## Move your focus 
@@ -173,7 +166,6 @@ bindsym $mod+Shift+Down   move down
 bindsym $mod+Shift+Up     move up
 bindsym $mod+Shift+Right  move right
 
-# === #
 
 # Workspaces
 ## Switch to workspace
@@ -200,7 +192,6 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# === #
 
 # Layout
 ## Switch the current container between different layout styles
@@ -230,9 +221,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+g mode "gaps"
 
 ## Modify how PiP windows should be displayed
-for_window [title="Picture in picture"] floating enable, move position 1249 645, resize set width 620px height 350px, sticky enable
-
-# === #
+for_window [title="Picture in picture"] floating enable, move position 1425 745, resize set width 445px height 250px, sticky enable
 
 # Styling
 ## Bar
@@ -240,7 +229,6 @@ bar {
     position top
     height 35
     status_command while date +'%d %b %Y | %H:%M '; do sleep 1; done
-    colors {
     colors {
         statusline $foreground
         background $background
@@ -264,20 +252,22 @@ client.urgent           $color1  $color1      $color1     $color1
 client.placeholder      $color1  $color1      $color1     $color1
 
 ## Font to be used system-wide
-font pango: Source Sans Pro 10
+font pango: Roboto 10
 
 ## Gaps
 gaps inner 15
 gaps outer 5
 
-## Completly get rid of titlebars and change
-## border's size
+## Completly get rid of borders
 default_border pixel 5
 default_floating_border pixel 5
 hide_edge_borders none
 
 ## Set themes, fonts, cursors etc. for GTK applications
 exec_always {
-    gsettings set $gnome-schema font-name 'Source Sans Pro'
+    gsettings set $gnome-schema font-name 'Roboto 10'
     gsettings set org.gnome.desktop.wm.preferences button-layout ""
 }
+
+# === #
+include /etc/sway/config.d/*
