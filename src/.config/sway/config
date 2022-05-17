@@ -251,8 +251,8 @@ gaps inner 15
 gaps outer 5
 
 ## Completly get rid of borders
-default_border pixel 3.5
-default_floating_border pixel 3.5
+default_border pixel 5
+default_floating_border pixel 5
 hide_edge_borders none
 
 ## Set themes, fonts, cursors etc. for GTK applications
